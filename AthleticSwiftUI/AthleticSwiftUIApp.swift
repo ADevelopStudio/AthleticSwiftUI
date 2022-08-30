@@ -11,7 +11,7 @@ import SwiftUI
 struct AthleticSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ArticlesView()
         }
     }
 }
