@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ArticleDetailsView: View {
     @State var article: Article
-
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 10) {
@@ -44,14 +44,26 @@ struct ArticleDetailsView: View {
                     .font(.body)
                 
                 Spacer()
+                
+                NavigationLink {
+                    ArticlesView(showFilterButtons: false, preselectedFilter: .byTeam(id: article.team.id))
+                } label: {
+                    Text("Show all articles of this team")
+                }
+                
+                NavigationLink {
+                    ArticlesView(showFilterButtons: false, preselectedFilter: .byLeague(id: article.league.id))
+                } label: {
+                    Text("Show all articles of this league")
+                }
+                
+                NavigationLink {
+                    ArticlesView(showFilterButtons: false, preselectedFilter: .byTeam(id: article.team.id))
+                } label: {
+                    Text("Show all articles from same author")
+                }
             }
             .padding(.horizontal)
         }
     }
 }
-
-//struct ArticleDetailsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ArticleDetailsView(article: .example)
-//    }
-//}

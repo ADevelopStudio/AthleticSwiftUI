@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FilterListView: View {
     @State var filteringValue: Filterable
-
+    
     var body: some View {
         HStack {
             Text(filteringValue.name)

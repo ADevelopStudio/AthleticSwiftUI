@@ -9,11 +9,13 @@ import SwiftUI
 
 struct ArticlesView: View {
     @StateObject fileprivate var viewModel =  ArticlesViewModel()
-    @State var showFilterButtons: Bool
     @State private var showingPickFilterValueModal = false
     
+    @State var showFilterButtons: Bool
+    @State var preselectedFilter: ArticleFilter
+    
     var body: some View {
-        NavigationView {
+        VStack {
             switch viewModel.loadingState {
             case .loaded(let articles):
                 if articles.isEmpty {
@@ -79,13 +81,15 @@ struct ArticlesView: View {
             FilterView(type: viewModel.selectedFilterType, isPresented: $showingPickFilterValueModal, selectedFilter: $viewModel.selectedFilter)
         }
         .task {
-            await self.viewModel.fetchArticles()
+            await self.viewModel.changeFilter(to: self.preselectedFilter)
         }
     }
 }
 
 struct ArticlesView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticlesView(showFilterButtons: true)
+        NavigationView {
+            ArticlesView(showFilterButtons: true, preselectedFilter: .everything)
+        }
     }
 }

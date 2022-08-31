@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		620A6FB728BDBDCC004B3A4F /* AthleticSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A6FB628BDBDCC004B3A4F /* AthleticSwiftUIApp.swift */; };
-		620A6FB928BDBDCC004B3A4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A6FB828BDBDCC004B3A4F /* ContentView.swift */; };
 		620A6FBB28BDBDCC004B3A4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620A6FBA28BDBDCC004B3A4F /* Assets.xcassets */; };
 		620A6FBE28BDBDCC004B3A4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620A6FBD28BDBDCC004B3A4F /* Preview Assets.xcassets */; };
 		620A6FC828BDBDCD004B3A4F /* AthleticSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A6FC728BDBDCD004B3A4F /* AthleticSwiftUITests.swift */; };
@@ -54,7 +53,6 @@
 /* Begin PBXFileReference section */
 		620A6FB328BDBDCC004B3A4F /* AthleticSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AthleticSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		620A6FB628BDBDCC004B3A4F /* AthleticSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleticSwiftUIApp.swift; sourceTree = "<group>"; };
-		620A6FB828BDBDCC004B3A4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		620A6FBA28BDBDCC004B3A4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		620A6FBD28BDBDCC004B3A4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		620A6FC328BDBDCD004B3A4F /* AthleticSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AthleticSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +130,6 @@
 			children = (
 				620A6FFB28BE08AA004B3A4F /* Mocks */,
 				620A6FB628BDBDCC004B3A4F /* AthleticSwiftUIApp.swift */,
-				620A6FB828BDBDCC004B3A4F /* ContentView.swift */,
 				62277AA428BE255300209624 /* Authors */,
 				620A700228BE2184004B3A4F /* Articles */,
 				620A6FFF28BE0CC6004B3A4F /* Networking */,
@@ -382,7 +379,6 @@
 				62277AAB28BED1FE00209624 /* League.swift in Sources */,
 				62277AA328BE250700209624 /* MockAuthor.swift in Sources */,
 				62277AA128BE24D600209624 /* MockTeam.swift in Sources */,
-				620A6FB928BDBDCC004B3A4F /* ContentView.swift in Sources */,
 				620A6FE728BDC085004B3A4F /* ArticlesView.swift in Sources */,
 				620A6FE128BDBDE9004B3A4F /* AthleticNetworkModel.swift in Sources */,
 				62277A9F28BE243100209624 /* Author.swift in Sources */,

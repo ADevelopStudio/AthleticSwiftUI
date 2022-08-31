@@ -13,7 +13,7 @@ final class AthleticNetworkModel {
         case invalidStatus
         case invalidUrl
         
-        public var errorDescription: String? {
+        var errorDescription: String? {
             switch self {
             case .invalidStatus:
                 return "Nothing found"
@@ -26,14 +26,11 @@ final class AthleticNetworkModel {
     }
     
     private let baseUrl = URL(string: "https://mobile-interview-backend.theathletic.com/")!
-
+    
     fileprivate func fetch<T: Decodable>(request: URLRequest) async throws -> T {
         let (data, _) = try await URLSession.shared.data(for: request)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-//        if let dataStr = String(data: data, encoding: .utf8) {
-//            print(dataStr)
-//        }
         return try decoder.decode(T.self, from: data)
     }
 }
