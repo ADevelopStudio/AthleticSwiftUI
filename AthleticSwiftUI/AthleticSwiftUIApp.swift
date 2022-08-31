@@ -11,9 +11,9 @@ import SwiftUI
 struct AthleticSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+//            NavigationView {
                 ArticlesView(showFilterButtons: true, preselectedFilter: .everything)
-            }
+//            }
         }
     }
 }

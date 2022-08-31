@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ArticleListView: View {
+struct ArticleListElementView: View {
     @State var article: Article
     
     var body: some View {
@@ -54,7 +54,7 @@ struct ArticleListView: View {
 struct ArticleListView_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            ArticleListView(article: .example)
+            ArticleListElementView(article: .example)
                 .listRowSeparator(.hidden)
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
         }

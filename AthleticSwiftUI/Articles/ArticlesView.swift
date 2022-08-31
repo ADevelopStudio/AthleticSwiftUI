@@ -15,7 +15,7 @@ struct ArticlesView: View {
     @State var preselectedFilter: ArticleFilter
     
     var body: some View {
-        VStack {
+        NavigationView {
             switch viewModel.loadingState {
             case .loaded(let articles):
                 if articles.isEmpty {
@@ -45,7 +45,7 @@ struct ArticlesView: View {
                                 } label: {
                                     EmptyView()
                                 }
-                                ArticleListView(article: article)
+                                ArticleListElementView(article: article)
                             }
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 0))
@@ -88,8 +88,8 @@ struct ArticlesView: View {
 
 struct ArticlesView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+//        NavigationView {
             ArticlesView(showFilterButtons: true, preselectedFilter: .everything)
-        }
+//        }
     }
 }
