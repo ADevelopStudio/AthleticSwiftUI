@@ -6,31 +6,6 @@
 //
 
 import Foundation
-/*
-extension ApiPath {
-    private static let apiKey = "95d190a434083879a6398aafd54d9e73"
-    
-    private var queryItem: URLQueryItem {
-        switch self {
-        case .search(let searchString):
-            return URLQueryItem(name: "q", value: [searchString, "au"].joined(separator: ","))
-        case .update(let id):
-            return URLQueryItem(name: "id", value: String(describing: id))
-        }
-    }
-    
-    var url: URL? {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "api.openweathermap.org"
-        components.path = "/data/2.5/weather"
-        let queryAppId = URLQueryItem(name: "appid", value: ApiPath.apiKey)
-        let queryMetric = URLQueryItem(name: "units", value: "metric")
-        components.queryItems = [self.queryItem, queryAppId, queryMetric]
-        return components.url
-    }
-}
- */
 
 final class AthleticNetworkModel {
     enum ServiceError: Error, LocalizedError {
@@ -52,18 +27,43 @@ final class AthleticNetworkModel {
     
     private let baseUrl = URL(string: "https://mobile-interview-backend.theathletic.com/")!
 
-    func fetchArticles() async throws -> [Article] {
-        try await fetch(request: URLRequest(url: baseUrl.appendingPathComponent("articles")))
-    }
-
-    private func fetch<T: Decodable>(request: URLRequest) async throws -> T {
+    fileprivate func fetch<T: Decodable>(request: URLRequest) async throws -> T {
         let (data, _) = try await URLSession.shared.data(for: request)
-
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        if let dataStr = String(data: data, encoding: .utf8) {
-            print(dataStr)
-        }
+//        if let dataStr = String(data: data, encoding: .utf8) {
+//            print(dataStr)
+//        }
         return try decoder.decode(T.self, from: data)
+    }
+}
+
+extension AthleticNetworkModel {
+    
+    func fetchFilteringValues(type: ArticleFilterPickerType) async throws -> [Filterable] {
+        switch type {
+        case .team:
+            return try await self.fetchTeams()
+        case .league:
+            return try await self.fetchLeagues()
+        case .author:
+            return try await self.fetchAuthors()
+        }
+    }
+    
+    func fetchArticles(filter: ArticleFilter = .everything) async throws -> [Article] {
+        try await fetch(request: URLRequest(url: baseUrl.appendingPathComponent(filter.apiPath)))
+    }
+    
+    private func fetchTeams() async throws -> [Team] {
+        try await fetch(request: URLRequest(url: baseUrl.appendingPathComponent("teams")))
+    }
+    
+    private func fetchLeagues() async throws -> [League] {
+        try await fetch(request: URLRequest(url: baseUrl.appendingPathComponent("leagues")))
+    }
+    
+    func fetchAuthors() async throws -> [Author] {
+        try await fetch(request: URLRequest(url: baseUrl.appendingPathComponent("authors")))
     }
 }

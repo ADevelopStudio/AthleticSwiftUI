@@ -16,11 +16,7 @@ struct Article: Codable, Identifiable{
     let updatedAt: Date
     let deletedAt: Date?
     
-    var league: IdentifiableObject
-    var team: IdentifiableObject
-    var author: IdentifiableObject
-}
-
-struct IdentifiableObject: Codable{
-    var id: String
+    let league: IdentifiableObject
+    let team: IdentifiableObject
+    let author: IdentifiableObject
 }

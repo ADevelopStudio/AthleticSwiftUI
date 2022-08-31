@@ -1,30 +1,27 @@
 //
-//  ArticlesViewModel.swift
+//  FilterViewModel.swift
 //  AthleticSwiftUI
 //
-//  Created by Dmitrii Zverev on 30/8/2022.
+//  Created by Dmitrii Zverev on 31/8/2022.
 //
 
 import Foundation
 
 @MainActor
-class ArticlesViewModel: ObservableObject {
+class FilterViewModel: ObservableObject {
     enum LoadingState {
-        case loaded([Article])
+        case loaded([Filterable])
         case loading
         case failedToUpdate(String)
     }
-    
     @Published private(set) var loadingState = LoadingState.loading
-
-    private let network = AthleticNetworkModel()
-
-    init() { }
     
-    func fetchArticles() async {
+    private let network = AthleticNetworkModel()
+    
+    func fetchResults(type: ArticleFilterPickerType) async {
         loadingState = .loading
         do {
-            let result = try await network.fetchArticles()
+            let result = try await network.fetchFilteringValues(type: type)
             loadingState = .loaded(result)
         } catch {
             loadingState = .failedToUpdate(error.localizedDescription)

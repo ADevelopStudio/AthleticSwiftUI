@@ -22,6 +22,16 @@
 		620A6FFA28BDD97C004B3A4F /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A6FF928BDD97C004B3A4F /* CacheAsyncImage.swift */; };
 		620A6FFD28BE08BF004B3A4F /* MockArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A6FFC28BE08BF004B3A4F /* MockArticle.swift */; };
 		620A700128BE0D80004B3A4F /* ArticleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A700028BE0D80004B3A4F /* ArticleDetailsView.swift */; };
+		62277A9D28BE22AB00209624 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277A9C28BE22AB00209624 /* Team.swift */; };
+		62277A9F28BE243100209624 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277A9E28BE243100209624 /* Author.swift */; };
+		62277AA128BE24D600209624 /* MockTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277AA028BE24D600209624 /* MockTeam.swift */; };
+		62277AA328BE250700209624 /* MockAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277AA228BE250700209624 /* MockAuthor.swift */; };
+		62277AAB28BED1FE00209624 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277AAA28BED1FE00209624 /* League.swift */; };
+		62277AAF28BEFFCA00209624 /* Miscellaneous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277AAE28BEFFCA00209624 /* Miscellaneous.swift */; };
+		62277AB228BF59CD00209624 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277AB128BF59CD00209624 /* FilterView.swift */; };
+		62277AB428BF59D200209624 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277AB328BF59D200209624 /* FilterViewModel.swift */; };
+		62277AB628BF5A4500209624 /* FilterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277AB528BF5A4500209624 /* FilterListView.swift */; };
+		62277AB828BF788900209624 /* ArticlesFilterPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277AB728BF788900209624 /* ArticlesFilterPanelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +70,16 @@
 		620A6FF928BDD97C004B3A4F /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
 		620A6FFC28BE08BF004B3A4F /* MockArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockArticle.swift; sourceTree = "<group>"; };
 		620A700028BE0D80004B3A4F /* ArticleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsView.swift; sourceTree = "<group>"; };
+		62277A9C28BE22AB00209624 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		62277A9E28BE243100209624 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		62277AA028BE24D600209624 /* MockTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTeam.swift; sourceTree = "<group>"; };
+		62277AA228BE250700209624 /* MockAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthor.swift; sourceTree = "<group>"; };
+		62277AAA28BED1FE00209624 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		62277AAE28BEFFCA00209624 /* Miscellaneous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Miscellaneous.swift; sourceTree = "<group>"; };
+		62277AB128BF59CD00209624 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		62277AB328BF59D200209624 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		62277AB528BF5A4500209624 /* FilterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListView.swift; sourceTree = "<group>"; };
+		62277AB728BF788900209624 /* ArticlesFilterPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesFilterPanelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +133,8 @@
 				620A6FFB28BE08AA004B3A4F /* Mocks */,
 				620A6FB628BDBDCC004B3A4F /* AthleticSwiftUIApp.swift */,
 				620A6FB828BDBDCC004B3A4F /* ContentView.swift */,
-				620A6FE628BDC085004B3A4F /* ArticlesView.swift */,
-				620A6FE828BDC28C004B3A4F /* ArticleListView.swift */,
-				620A6FE428BDBE2B004B3A4F /* ArticlesViewModel.swift */,
-				620A700028BE0D80004B3A4F /* ArticleDetailsView.swift */,
+				62277AA428BE255300209624 /* Authors */,
+				620A700228BE2184004B3A4F /* Articles */,
 				620A6FFF28BE0CC6004B3A4F /* Networking */,
 				620A6FFE28BE0CB7004B3A4F /* Models */,
 				620A6FBA28BDBDCC004B3A4F /* Assets.xcassets */,
@@ -163,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				620A6FFC28BE08BF004B3A4F /* MockArticle.swift */,
+				62277AA028BE24D600209624 /* MockTeam.swift */,
+				62277AA228BE250700209624 /* MockAuthor.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -171,6 +191,10 @@
 			isa = PBXGroup;
 			children = (
 				620A6FE228BDBE06004B3A4F /* Article.swift */,
+				62277A9C28BE22AB00209624 /* Team.swift */,
+				62277A9E28BE243100209624 /* Author.swift */,
+				62277AAA28BED1FE00209624 /* League.swift */,
+				62277AAE28BEFFCA00209624 /* Miscellaneous.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +205,36 @@
 				620A6FE028BDBDE9004B3A4F /* AthleticNetworkModel.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		620A700228BE2184004B3A4F /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				62277AB028BF59B700209624 /* Filters */,
+				620A6FE628BDC085004B3A4F /* ArticlesView.swift */,
+				620A6FE428BDBE2B004B3A4F /* ArticlesViewModel.swift */,
+				62277AB728BF788900209624 /* ArticlesFilterPanelView.swift */,
+				620A6FE828BDC28C004B3A4F /* ArticleListView.swift */,
+				620A700028BE0D80004B3A4F /* ArticleDetailsView.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		62277AA428BE255300209624 /* Authors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authors;
+			sourceTree = "<group>";
+		};
+		62277AB028BF59B700209624 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				62277AB128BF59CD00209624 /* FilterView.swift */,
+				62277AB528BF5A4500209624 /* FilterListView.swift */,
+				62277AB328BF59D200209624 /* FilterViewModel.swift */,
+			);
+			path = Filters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,13 +369,23 @@
 			files = (
 				620A6FE328BDBE06004B3A4F /* Article.swift in Sources */,
 				620A6FE928BDC28C004B3A4F /* ArticleListView.swift in Sources */,
+				62277A9D28BE22AB00209624 /* Team.swift in Sources */,
 				620A700128BE0D80004B3A4F /* ArticleDetailsView.swift in Sources */,
 				620A6FFA28BDD97C004B3A4F /* CacheAsyncImage.swift in Sources */,
+				62277AB628BF5A4500209624 /* FilterListView.swift in Sources */,
 				620A6FFD28BE08BF004B3A4F /* MockArticle.swift in Sources */,
+				62277AAF28BEFFCA00209624 /* Miscellaneous.swift in Sources */,
+				62277AB828BF788900209624 /* ArticlesFilterPanelView.swift in Sources */,
+				62277AB228BF59CD00209624 /* FilterView.swift in Sources */,
+				62277AB428BF59D200209624 /* FilterViewModel.swift in Sources */,
 				620A6FE528BDBE2B004B3A4F /* ArticlesViewModel.swift in Sources */,
+				62277AAB28BED1FE00209624 /* League.swift in Sources */,
+				62277AA328BE250700209624 /* MockAuthor.swift in Sources */,
+				62277AA128BE24D600209624 /* MockTeam.swift in Sources */,
 				620A6FB928BDBDCC004B3A4F /* ContentView.swift in Sources */,
 				620A6FE728BDC085004B3A4F /* ArticlesView.swift in Sources */,
 				620A6FE128BDBDE9004B3A4F /* AthleticNetworkModel.swift in Sources */,
+				62277A9F28BE243100209624 /* Author.swift in Sources */,
 				620A6FB728BDBDCC004B3A4F /* AthleticSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
