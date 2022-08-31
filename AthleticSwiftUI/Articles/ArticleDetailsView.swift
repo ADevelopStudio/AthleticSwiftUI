@@ -45,22 +45,13 @@ struct ArticleDetailsView: View {
                 
                 Spacer()
                 
-                NavigationLink {
-                    ArticlesView(showFilterButtons: false, preselectedFilter: .byTeam(id: article.team.id))
-                } label: {
-                    Text("Show all articles of this team")
-                }
-                
-                NavigationLink {
-                    ArticlesView(showFilterButtons: false, preselectedFilter: .byLeague(id: article.league.id))
-                } label: {
-                    Text("Show all articles of this league")
-                }
-                
-                NavigationLink {
-                    ArticlesView(showFilterButtons: false, preselectedFilter: .byTeam(id: article.team.id))
-                } label: {
-                    Text("Show all articles from same author")
+                ForEach(ArticleFilter.generate(from: article)) { filter in
+                    NavigationLink {
+                        ArticlesView(showFilterButtons: false, preselectedFilter: filter)
+                    } label: {
+                        Text(filter.buttonTitle)
+                    }
+                    .padding(.vertical, 5)
                 }
             }
             .padding(.horizontal)

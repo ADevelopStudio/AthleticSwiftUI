@@ -11,6 +11,7 @@ struct ArticlesFilterPanelView: View {
     @Binding var selectedFilterType: ArticleFilterPickerType
     @Binding var showingPickFilterValueModal: Bool
     @State var needToShowReset: Bool
+    
     var onReset: (() -> Void)
     
     var body: some View {

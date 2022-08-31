@@ -21,6 +21,7 @@ enum ArticleFilterPickerType: CaseIterable, Identifiable {
     case team
     case league
     case author
+    
     var id: ArticleFilterPickerType {self}
 }
 
@@ -30,11 +31,36 @@ extension ArticleFilterPickerType {
     }
 }
 
-enum ArticleFilter: Comparable {
+enum ArticleFilter: Comparable, Identifiable {
     case everything
     case byAuthor(id: String)
     case byTeam(id: String)
     case byLeague(id: String)
+    
+    var id: String { String(describing: self) }
+}
+
+extension ArticleFilter {
+    var buttonTitle: String {
+        switch self {
+        case .everything:
+            return "Show all articles"
+        case .byAuthor:
+            return "Show all articles of this author"
+        case .byTeam:
+            return "Show all articles about this team"
+        case .byLeague:
+            return "Show all articles about this league"
+        }
+    }
+    
+    static func generate(from article: Article) ->  [ArticleFilter] {
+        [
+            .byTeam(id: article.team.id),
+            .byLeague(id: article.league.id),
+            .byAuthor(id: article.author.id),
+        ]
+    }
 }
 
 extension ArticleFilter{
