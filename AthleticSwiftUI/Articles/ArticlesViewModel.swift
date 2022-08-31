@@ -17,7 +17,7 @@ class ArticlesViewModel: ObservableObject {
     
     @Published private(set) var loadingState = LoadingState.loading
     
-    private(set) var articleFilter: ArticleFilter = .everything
+    private var articleFilter: ArticleFilter? = nil
     private let network = AthleticNetworkModel()
     
     
@@ -36,14 +36,19 @@ class ArticlesViewModel: ObservableObject {
     }
     
     func changeFilter(to articleFilter: ArticleFilter) async {
+        if self.articleFilter == articleFilter { return }
         self.articleFilter = articleFilter
         await self.fetchArticles()
     }
     
     func fetchArticles() async {
+        guard let articleFilter = articleFilter else {
+            loadingState = .failedToUpdate("Filter was not set")
+            return
+        }
         loadingState = .loading
         do {
-            let result = try await network.fetchArticles(filter: self.articleFilter)
+            let result = try await network.fetchArticles(filter: articleFilter)
             loadingState = .loaded(result)
         } catch {
             loadingState = .failedToUpdate(error.localizedDescription)

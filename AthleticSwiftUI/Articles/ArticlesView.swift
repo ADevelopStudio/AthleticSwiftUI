@@ -15,7 +15,7 @@ struct ArticlesView: View {
     @State var preselectedFilter: ArticleFilter
     
     var body: some View {
-        NavigationView {
+        VStack {
             switch viewModel.loadingState {
             case .loaded(let articles):
                 if articles.isEmpty {
@@ -38,22 +38,7 @@ struct ArticlesView: View {
                                 Task { await self.viewModel.changeFilter(to: .everything) }
                             }
                         }
-                        List(articles) { article in
-                            ZStack {
-                                NavigationLink {
-                                    ArticleDetailsView(article: article)
-                                } label: {
-                                    EmptyView()
-                                }
-                                ArticleListElementView(article: article)
-                            }
-                            .listRowSeparator(.hidden)
-                            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 0))
-                            
-                        }
-                        .listStyle(.grouped)
-                        .padding(.horizontal, -20)
-                        
+                        ArticleListView(articles: articles)
                     }
                     .navigationTitle("Articles")
                 }
@@ -67,9 +52,7 @@ struct ArticlesView: View {
                     Text(error)
                         .font(.headline)
                     Button("Try again") {
-                        Task {
-                            await self.viewModel.fetchArticles()
-                        }
+                        Task { await self.viewModel.changeFilter(to: .everything) }
                     }
                 }
             case .loading:
@@ -88,8 +71,8 @@ struct ArticlesView: View {
 
 struct ArticlesView_Previews: PreviewProvider {
     static var previews: some View {
-//        NavigationView {
+        NavigationView {
             ArticlesView(showFilterButtons: true, preselectedFilter: .everything)
-//        }
+        }
     }
 }

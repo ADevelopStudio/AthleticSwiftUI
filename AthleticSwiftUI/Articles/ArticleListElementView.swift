@@ -51,7 +51,7 @@ struct ArticleListElementView: View {
     }
 }
 
-struct ArticleListView_Previews: PreviewProvider {
+struct ArticleListElementView_Previews: PreviewProvider {
     static var previews: some View {
         List {
             ArticleListElementView(article: .example)

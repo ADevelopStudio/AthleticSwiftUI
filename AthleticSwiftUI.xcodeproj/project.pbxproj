@@ -31,6 +31,7 @@
 		62277AB428BF59D200209624 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277AB328BF59D200209624 /* FilterViewModel.swift */; };
 		62277AB628BF5A4500209624 /* FilterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277AB528BF5A4500209624 /* FilterListView.swift */; };
 		62277AB828BF788900209624 /* ArticlesFilterPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277AB728BF788900209624 /* ArticlesFilterPanelView.swift */; };
+		62277ABA28BF8F5100209624 /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62277AB928BF8F5100209624 /* ArticleListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		62277AB328BF59D200209624 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		62277AB528BF5A4500209624 /* FilterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListView.swift; sourceTree = "<group>"; };
 		62277AB728BF788900209624 /* ArticlesFilterPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesFilterPanelView.swift; sourceTree = "<group>"; };
+		62277AB928BF8F5100209624 /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				620A6FE428BDBE2B004B3A4F /* ArticlesViewModel.swift */,
 				62277AB728BF788900209624 /* ArticlesFilterPanelView.swift */,
 				620A6FE828BDC28C004B3A4F /* ArticleListElementView.swift */,
+				62277AB928BF8F5100209624 /* ArticleListView.swift */,
 				620A700028BE0D80004B3A4F /* ArticleDetailsView.swift */,
 			);
 			path = Articles;
@@ -375,6 +378,7 @@
 				62277AB828BF788900209624 /* ArticlesFilterPanelView.swift in Sources */,
 				62277AB228BF59CD00209624 /* FilterView.swift in Sources */,
 				62277AB428BF59D200209624 /* FilterViewModel.swift in Sources */,
+				62277ABA28BF8F5100209624 /* ArticleListView.swift in Sources */,
 				620A6FE528BDBE2B004B3A4F /* ArticlesViewModel.swift in Sources */,
 				62277AAB28BED1FE00209624 /* League.swift in Sources */,
 				62277AA328BE250700209624 /* MockAuthor.swift in Sources */,
