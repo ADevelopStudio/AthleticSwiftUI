@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ArticleListView: View {
-    @State var articles: [Article]
+    @Binding var articles: [Article]
     
     var body: some View {
         List(articles) { article in
@@ -32,7 +32,7 @@ struct ArticleListView: View {
 struct ArticleListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ArticleListView(articles: [.example])
+            ArticleListView(articles: .constant([.example]))
         }
     }
 }

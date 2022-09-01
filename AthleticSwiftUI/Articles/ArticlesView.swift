@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ArticlesView: View {
-    @StateObject fileprivate var viewModel =  ArticlesViewModel()
+    @StateObject fileprivate var viewModel = ArticlesViewModel()
     @State private var showingPickFilterValueModal = false
     
     @State var showFilterButtons: Bool
@@ -17,8 +17,8 @@ struct ArticlesView: View {
     var body: some View {
         VStack {
             switch viewModel.loadingState {
-            case .loaded(let articles):
-                if articles.isEmpty {
+            case .loaded:
+                if viewModel.filteredArticles.isEmpty {
                     VStack(spacing: 15) {
                         Image(systemName: "doc.text.magnifyingglass")
                             .symbolRenderingMode(.multicolor)
@@ -28,18 +28,19 @@ struct ArticlesView: View {
                         Text("No articles found")
                             .font(.title2)
                         Button("Reset") {
-                            Task { await self.viewModel.changeFilter(to: .everything) }
+                            self.viewModel.selectedFilter = .everything
                         }
                     }
                 } else {
                     VStack {
                         if showFilterButtons {
                             ArticlesFilterPanelView(selectedFilterType: $viewModel.selectedFilterType, showingPickFilterValueModal: $showingPickFilterValueModal, needToShowReset: viewModel.needToShowResetFilterButton) {
-                                Task { await self.viewModel.changeFilter(to: .everything) }
+                                self.viewModel.selectedFilter = .everything
                             }
                         }
-                        ArticleListView(articles: articles)
+                        ArticleListView(articles: $viewModel.filteredArticles)
                     }
+                    .searchable(text: $viewModel.searchText)
                     .navigationTitle("Articles")
                 }
             case .failedToUpdate(let error):
@@ -52,7 +53,7 @@ struct ArticlesView: View {
                     Text(error)
                         .font(.headline)
                     Button("Try again") {
-                        Task { await self.viewModel.changeFilter(to: .everything) }
+                        self.viewModel.selectedFilter = .everything
                     }
                 }
             case .loading:
@@ -64,7 +65,7 @@ struct ArticlesView: View {
             FilterView(type: viewModel.selectedFilterType, isPresented: $showingPickFilterValueModal, selectedFilter: $viewModel.selectedFilter)
         }
         .task {
-            await self.viewModel.changeFilter(to: self.preselectedFilter)
+            self.viewModel.selectedFilter = self.preselectedFilter
         }
     }
 }

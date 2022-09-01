@@ -40,9 +40,16 @@ struct ArticleDetailsView: View {
                 Text(article.title)
                     .font(.title2)
                 
+                HStack {
+                    Text(article.publishedDate)
+                        .font(.caption2)
+                        .foregroundColor(.gray)
+                    Spacer()
+                }
+                
                 Text(article.body)
                     .font(.body)
-                
+
                 Spacer()
                 
                 ForEach(ArticleFilter.generate(from: article)) { filter in
@@ -50,11 +57,19 @@ struct ArticleDetailsView: View {
                         ArticlesView(showFilterButtons: false, preselectedFilter: filter)
                     } label: {
                         Text(filter.buttonTitle)
+                            .foregroundColor(.blue)
+                            .underline()
                     }
                     .padding(.vertical, 5)
                 }
             }
             .padding(.horizontal)
         }
+    }
+}
+
+struct ArticleDetailsView_Previews: PreviewProvider {
+    static var previews: some View {
+        ArticleDetailsView(article: .example)
     }
 }

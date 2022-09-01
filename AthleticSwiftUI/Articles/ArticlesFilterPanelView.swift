@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct ArticlesFilterPanelView: View {
     @Binding var selectedFilterType: ArticleFilterPickerType
     @Binding var showingPickFilterValueModal: Bool
@@ -22,7 +21,13 @@ struct ArticlesFilterPanelView: View {
                     selectedFilterType = type
                     showingPickFilterValueModal = true
                 } label: {
-                    Text(type.buttonTitle)
+                    if selectedFilterType.buttonTitle == type.buttonTitle && needToShowReset {
+                        Text(type.buttonTitle)
+                            .bold()
+                            .underline()
+                    } else {
+                        Text(type.buttonTitle)
+                    }
                 }
             }
             

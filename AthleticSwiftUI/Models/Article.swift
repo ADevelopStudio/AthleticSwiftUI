@@ -12,11 +12,25 @@ struct Article: Codable, Identifiable{
     let title: String
     let imageUrlString: String
     let body: String
-    let createdAt: Date
-    let updatedAt: Date
-    let deletedAt: Date?
+    private let createdAt: Date
+    private let updatedAt: Date
+    private let deletedAt: Date?
     
     let league: IdentifiableObject
     let team: IdentifiableObject
     let author: IdentifiableObject
+}
+
+extension Article {
+    var publishedDate: String {
+        let df = DateFormatter()
+        df.dateStyle = .full
+        df.timeStyle = .medium
+        df.doesRelativeDateFormatting = true
+        if  df.string(from: createdAt) == df.string(from: updatedAt) {
+            return df.string(from: createdAt)
+        } else {
+            return ["Posted:", df.string(from: createdAt),"\nUpdated:", df.string(from: updatedAt)].joined(separator: " ")
+        }
+    }
 }
