@@ -49,7 +49,7 @@ struct ArticleDetailsView: View {
                 
                 Text(article.body)
                     .font(.body)
-
+                
                 Spacer()
                 
                 ForEach(ArticleFilter.generate(from: article)) { filter in

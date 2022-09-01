@@ -11,8 +11,6 @@
 		620A6FBB28BDBDCC004B3A4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620A6FBA28BDBDCC004B3A4F /* Assets.xcassets */; };
 		620A6FBE28BDBDCC004B3A4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620A6FBD28BDBDCC004B3A4F /* Preview Assets.xcassets */; };
 		620A6FC828BDBDCD004B3A4F /* AthleticSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A6FC728BDBDCD004B3A4F /* AthleticSwiftUITests.swift */; };
-		620A6FD228BDBDCD004B3A4F /* AthleticSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A6FD128BDBDCD004B3A4F /* AthleticSwiftUIUITests.swift */; };
-		620A6FD428BDBDCD004B3A4F /* AthleticSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A6FD328BDBDCD004B3A4F /* AthleticSwiftUIUITestsLaunchTests.swift */; };
 		620A6FE128BDBDE9004B3A4F /* AthleticNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A6FE028BDBDE9004B3A4F /* AthleticNetworkModel.swift */; };
 		620A6FE328BDBE06004B3A4F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A6FE228BDBE06004B3A4F /* Article.swift */; };
 		620A6FE528BDBE2B004B3A4F /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620A6FE428BDBE2B004B3A4F /* ArticlesViewModel.swift */; };
@@ -42,13 +40,6 @@
 			remoteGlobalIDString = 620A6FB228BDBDCC004B3A4F;
 			remoteInfo = AthleticSwiftUI;
 		};
-		620A6FCE28BDBDCD004B3A4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 620A6FAB28BDBDCC004B3A4F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 620A6FB228BDBDCC004B3A4F;
-			remoteInfo = AthleticSwiftUI;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -58,9 +49,6 @@
 		620A6FBD28BDBDCC004B3A4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		620A6FC328BDBDCD004B3A4F /* AthleticSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AthleticSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		620A6FC728BDBDCD004B3A4F /* AthleticSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleticSwiftUITests.swift; sourceTree = "<group>"; };
-		620A6FCD28BDBDCD004B3A4F /* AthleticSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AthleticSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		620A6FD128BDBDCD004B3A4F /* AthleticSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleticSwiftUIUITests.swift; sourceTree = "<group>"; };
-		620A6FD328BDBDCD004B3A4F /* AthleticSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleticSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		620A6FE028BDBDE9004B3A4F /* AthleticNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleticNetworkModel.swift; sourceTree = "<group>"; };
 		620A6FE228BDBE06004B3A4F /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		620A6FE428BDBE2B004B3A4F /* ArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
@@ -97,13 +85,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		620A6FCA28BDBDCD004B3A4F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -112,7 +93,6 @@
 			children = (
 				620A6FB528BDBDCC004B3A4F /* AthleticSwiftUI */,
 				620A6FC628BDBDCD004B3A4F /* AthleticSwiftUITests */,
-				620A6FD028BDBDCD004B3A4F /* AthleticSwiftUIUITests */,
 				620A6FB428BDBDCC004B3A4F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,7 +102,6 @@
 			children = (
 				620A6FB328BDBDCC004B3A4F /* AthleticSwiftUI.app */,
 				620A6FC328BDBDCD004B3A4F /* AthleticSwiftUITests.xctest */,
-				620A6FCD28BDBDCD004B3A4F /* AthleticSwiftUIUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,7 +111,6 @@
 			children = (
 				620A6FFB28BE08AA004B3A4F /* Mocks */,
 				620A6FB628BDBDCC004B3A4F /* AthleticSwiftUIApp.swift */,
-				62277AA428BE255300209624 /* Authors */,
 				620A700228BE2184004B3A4F /* Articles */,
 				620A6FFF28BE0CC6004B3A4F /* Networking */,
 				620A6FFE28BE0CB7004B3A4F /* Models */,
@@ -157,15 +135,6 @@
 				620A6FC728BDBDCD004B3A4F /* AthleticSwiftUITests.swift */,
 			);
 			path = AthleticSwiftUITests;
-			sourceTree = "<group>";
-		};
-		620A6FD028BDBDCD004B3A4F /* AthleticSwiftUIUITests */ = {
-			isa = PBXGroup;
-			children = (
-				620A6FD128BDBDCD004B3A4F /* AthleticSwiftUIUITests.swift */,
-				620A6FD328BDBDCD004B3A4F /* AthleticSwiftUIUITestsLaunchTests.swift */,
-			);
-			path = AthleticSwiftUIUITests;
 			sourceTree = "<group>";
 		};
 		620A6FEA28BDC334004B3A4F /* ImageCacher */ = {
@@ -220,13 +189,6 @@
 			path = Articles;
 			sourceTree = "<group>";
 		};
-		62277AA428BE255300209624 /* Authors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Authors;
-			sourceTree = "<group>";
-		};
 		62277AB028BF59B700209624 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,24 +237,6 @@
 			productReference = 620A6FC328BDBDCD004B3A4F /* AthleticSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		620A6FCC28BDBDCD004B3A4F /* AthleticSwiftUIUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 620A6FDD28BDBDCD004B3A4F /* Build configuration list for PBXNativeTarget "AthleticSwiftUIUITests" */;
-			buildPhases = (
-				620A6FC928BDBDCD004B3A4F /* Sources */,
-				620A6FCA28BDBDCD004B3A4F /* Frameworks */,
-				620A6FCB28BDBDCD004B3A4F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				620A6FCF28BDBDCD004B3A4F /* PBXTargetDependency */,
-			);
-			name = AthleticSwiftUIUITests;
-			productName = AthleticSwiftUIUITests;
-			productReference = 620A6FCD28BDBDCD004B3A4F /* AthleticSwiftUIUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -307,10 +251,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					620A6FC228BDBDCD004B3A4F = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 620A6FB228BDBDCC004B3A4F;
-					};
-					620A6FCC28BDBDCD004B3A4F = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 620A6FB228BDBDCC004B3A4F;
 					};
@@ -331,7 +271,6 @@
 			targets = (
 				620A6FB228BDBDCC004B3A4F /* AthleticSwiftUI */,
 				620A6FC228BDBDCD004B3A4F /* AthleticSwiftUITests */,
-				620A6FCC28BDBDCD004B3A4F /* AthleticSwiftUIUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -347,13 +286,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		620A6FC128BDBDCD004B3A4F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		620A6FCB28BDBDCD004B3A4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,15 +330,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		620A6FC928BDBDCD004B3A4F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				620A6FD428BDBDCD004B3A4F /* AthleticSwiftUIUITestsLaunchTests.swift in Sources */,
-				620A6FD228BDBDCD004B3A4F /* AthleticSwiftUIUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -414,11 +337,6 @@
 			isa = PBXTargetDependency;
 			target = 620A6FB228BDBDCC004B3A4F /* AthleticSwiftUI */;
 			targetProxy = 620A6FC428BDBDCD004B3A4F /* PBXContainerItemProxy */;
-		};
-		620A6FCF28BDBDCD004B3A4F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 620A6FB228BDBDCC004B3A4F /* AthleticSwiftUI */;
-			targetProxy = 620A6FCE28BDBDCD004B3A4F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -635,42 +553,6 @@
 			};
 			name = Release;
 		};
-		620A6FDE28BDBDCD004B3A4F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2QX9SH777P;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.makemeapp.AthleticSwiftUIUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AthleticSwiftUI;
-			};
-			name = Debug;
-		};
-		620A6FDF28BDBDCD004B3A4F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2QX9SH777P;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.makemeapp.AthleticSwiftUIUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AthleticSwiftUI;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -697,15 +579,6 @@
 			buildConfigurations = (
 				620A6FDB28BDBDCD004B3A4F /* Debug */,
 				620A6FDC28BDBDCD004B3A4F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		620A6FDD28BDBDCD004B3A4F /* Build configuration list for PBXNativeTarget "AthleticSwiftUIUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				620A6FDE28BDBDCD004B3A4F /* Debug */,
-				620A6FDF28BDBDCD004B3A4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

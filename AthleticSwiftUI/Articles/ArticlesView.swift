@@ -34,7 +34,9 @@ struct ArticlesView: View {
                 } else {
                     VStack {
                         if showFilterButtons {
-                            ArticlesFilterPanelView(selectedFilterType: $viewModel.selectedFilterType, showingPickFilterValueModal: $showingPickFilterValueModal, needToShowReset: viewModel.needToShowResetFilterButton) {
+                            ArticlesFilterPanelView(selectedFilterType: $viewModel.selectedFilterType,
+                                                    showingPickFilterValueModal: $showingPickFilterValueModal,
+                                                    needToShowReset: viewModel.needToShowResetFilterButton) {
                                 self.viewModel.selectedFilter = .everything
                             }
                         }
@@ -62,7 +64,9 @@ struct ArticlesView: View {
             }
         }
         .sheet(isPresented: $showingPickFilterValueModal) {
-            FilterView(type: viewModel.selectedFilterType, isPresented: $showingPickFilterValueModal, selectedFilter: $viewModel.selectedFilter)
+            FilterView(type: viewModel.selectedFilterType,
+                       isPresented: $showingPickFilterValueModal,
+                       selectedFilter: $viewModel.selectedFilter)
         }
         .task {
             self.viewModel.selectedFilter = self.preselectedFilter

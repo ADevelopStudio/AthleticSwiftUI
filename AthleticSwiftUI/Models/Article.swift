@@ -30,7 +30,10 @@ extension Article {
         if  df.string(from: createdAt) == df.string(from: updatedAt) {
             return df.string(from: createdAt)
         } else {
-            return ["Posted:", df.string(from: createdAt),"\nUpdated:", df.string(from: updatedAt)].joined(separator: " ")
+            return ["Posted:",
+                    df.string(from: createdAt),"\nUpdated:",
+                    df.string(from: updatedAt)
+            ].joined(separator: " ")
         }
     }
 }

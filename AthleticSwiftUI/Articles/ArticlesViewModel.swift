@@ -30,7 +30,7 @@ class ArticlesViewModel: ObservableObject {
     @Published var filteredArticles: [Article] = []
     private var articles: [Article] = []
     private var searchTimer: Timer?
-
+    
     
     private let network = AthleticNetworkModel()
     
@@ -42,7 +42,9 @@ class ArticlesViewModel: ObservableObject {
     @Published var selectedFilter: ArticleFilter? {
         didSet {
             if let selectedFilter = selectedFilter, selectedFilter != oldValue {
-                Task { await self.fetchArticles() }
+                Task {
+                    await self.fetchArticles()
+                }
             }
         }
     }
