@@ -111,7 +111,6 @@
 		620A6FB528BDBDCC004B3A4F /* AthleticSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				620A6FFB28BE08AA004B3A4F /* Mocks */,
 				620A6FB628BDBDCC004B3A4F /* AthleticSwiftUIApp.swift */,
 				620A700228BE2184004B3A4F /* Articles */,
 				620A6FFF28BE0CC6004B3A4F /* Networking */,
@@ -161,6 +160,7 @@
 		620A6FFE28BE0CB7004B3A4F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				620A6FFB28BE08AA004B3A4F /* Mocks */,
 				620A6FE228BDBE06004B3A4F /* Article.swift */,
 				62277A9C28BE22AB00209624 /* Team.swift */,
 				62277A9E28BE243100209624 /* Author.swift */,
