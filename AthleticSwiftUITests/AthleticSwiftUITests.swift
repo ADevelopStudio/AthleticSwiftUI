@@ -6,12 +6,55 @@
 //
 
 import XCTest
+import SwiftUI
 @testable import AthleticSwiftUI
 
 class AthleticSwiftUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+    
+    func testMocks() throws {
+        let _ = Article.example
+        let _ = Team.example
+        let _ = Author.example
+        let _ =  League.example
+    }
+    
+    func testApi() async {
+        let serviceManager = AthleticNetworkModel()
+        let promiseValidDataArticles = expectation(description: "Object from API is correct")
+        let promiseValidDataAuthors = expectation(description: "Object from API is correct")
+        do {
+            let _ = try await serviceManager.fetchFilteringValues(type: .author)
+            promiseValidDataAuthors.fulfill()
+        } catch {
+            print("Error:", error)
+            XCTFail(error.localizedDescription)
+        }
+        
+        do {
+            let _ = try await serviceManager.fetchArticles()
+            promiseValidDataArticles.fulfill()
+        } catch {
+            print("Error:", error)
+            XCTFail(error.localizedDescription)
+        }
+        wait(for: [promiseValidDataArticles, promiseValidDataAuthors], timeout: 10)
+    }
+    
+    func testApiFail() async {
+        let serviceManager = AthleticNetworkModel()
+        let promiseInvalidData = expectation(description: "Object from API is NOT correct")
+        do {
+            let _ = try await serviceManager.fetchArticles(filter: .byLeague(id: "@"))
+            XCTFail("Somehow the object is good")
+        } catch {
+            print("Error:", error)
+            promiseInvalidData.fulfill()
+        }
+        wait(for: [promiseInvalidData], timeout: 10)
     }
 
     override func tearDownWithError() throws {
