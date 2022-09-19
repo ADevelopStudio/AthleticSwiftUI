@@ -22,7 +22,7 @@ class ArticlesViewModel: ObservableObject {
         didSet {
             searchTimer?.invalidate()
             searchTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false, block: { _ in
-                self.performSearch()
+                Task { await self.performSearch() }
             })
         }
     }

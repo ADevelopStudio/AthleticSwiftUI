@@ -19,10 +19,8 @@ struct Article: Codable, Identifiable{
     let league: IdentifiableObject
     let team: IdentifiableObject
     let author: IdentifiableObject
-}
-
-extension Article {
-    var publishedDate: String {
+    
+    lazy var publishedDate: String = {
         let df = DateFormatter()
         df.dateStyle = .full
         df.timeStyle = .medium
@@ -35,5 +33,5 @@ extension Article {
                     df.string(from: updatedAt)
             ].joined(separator: " ")
         }
-    }
+    }()
 }
